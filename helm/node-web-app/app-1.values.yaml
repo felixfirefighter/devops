@@ -1,0 +1,14 @@
+name: app-1
+deployment:
+  image: leeyoongti/node-web-app-1
+  tag: 1.0.2
+  containerPort: 3000
+  env: 
+    - name: REQUEST_ADDRESS
+      value: app-2-service
+    - name: VERSION
+      value: 1.0.2
+service:
+  type: NodePort
+  port: 3000
+  nodePort: 30111

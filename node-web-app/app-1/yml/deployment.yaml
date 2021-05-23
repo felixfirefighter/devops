@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-web-app-1
+  labels:
+    app: node-web-app-1
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: node-web-app-1
+  template:
+    metadata:
+      labels:
+        app: node-web-app-1
+    spec:
+      containers:
+        - name: node-web-app-1
+          image: leeyoongti/node-web-app-1:1.0.2
+          ports:
+            - containerPort: 3000
+          env:
+            - name: REQUEST_ADDRESS
+              value: app-2-service
+            - name: VERSION
+              value: 1.0.2

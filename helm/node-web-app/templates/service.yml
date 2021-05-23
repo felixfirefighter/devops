@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.name }}-service
+spec:
+  type: {{ .Values.service.type }}
+  selector:
+    app: {{ .Values.name }}
+  ports:
+      # By default and for convenience, the `targetPort` is set to the same value as the `port` field.
+    - port: {{ .Values.service.port | default 80 }}
+      targetPort: {{ .Values.service.port | default 80 }}
+      nodePort: {{ .Values.service.nodePort }}
