@@ -8,7 +8,7 @@ deployment:
     - name: REQUEST_ADDRESS
       value: app-1-service:3000
     - name: VERSION
-      value: 1.0.2
+      value: 1.1.0
 service:
   type: NodePort
   nodePort: 30112
