@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: first-app
-          image: leeyoongti/first-app:3.0.0
+          image: leeyoongti/first-app:1.0.0
           ports:
             - containerPort: 80
