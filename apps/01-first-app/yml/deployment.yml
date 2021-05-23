@@ -17,5 +17,7 @@ spec:
       containers:
         - name: first-app
           image: leeyoongti/first-app:1.0.0
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
+      

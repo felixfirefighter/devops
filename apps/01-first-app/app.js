@@ -4,7 +4,7 @@ const app = express()
 const port = 80
 
 app.get('/', (req, res) => {
-  res.send(`Simple App version 3, breaking changes`)
+  res.send(`Simple App version 1`)
 })
 
 app.get('/v1', (req, res) => {
