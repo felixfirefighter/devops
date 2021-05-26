@@ -1,0 +1,5 @@
+name: first-app
+deployment:
+  image: leeyoongti/first-app
+  tag: 2.0.0
+  containerPort: 80
