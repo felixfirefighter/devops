@@ -1,3 +1,0 @@
-deployment:
-  image: leeyoongti/first-app
-  tag: 3.0.0

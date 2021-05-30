@@ -19,7 +19,7 @@ spec:
           {{- with .Values.deployment }}
           image: {{ .image }}:{{ .tag }}
           ports:
-            - containerPort: {{ .containerPort }}
+            - containerPort: {{ .containerPort | default 80 }}
           {{- end }}
           env:
             {{- range .Values.deployment.env }}
